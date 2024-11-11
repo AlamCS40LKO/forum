@@ -17,13 +17,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $_SESSION['sno']=$row['sno'];
             $_SESSION['useremail']=$email;
             echo "logged in".$email;
-           header("location: /forum/index.php");
+           header("location: /php projects/forum/index.php");
             
         }
-            header("Location: /forum/index.php");
+            header("Location: /php projects/forum/index.php");
            
         }
-    header("location: /forum/index.php");
+    header("location: /php projects/forum/index.php");
 }
     
 ?>

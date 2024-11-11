@@ -3,7 +3,7 @@ include 'dbconn.php';
 session_start();
 echo '<nav class="navbar navbar-expand-lg navbar-light bg-light">
 <div class="container-fluid">
-  <a class="navbar-brand" href="/forum">iDiscuss</a>
+  <a class="navbar-brand" href="/php projects/forum">iDiscuss</a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,7 +11,7 @@ echo '<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
   
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="/forum">Home</a>
+        <a class="nav-link active" aria-current="page" href="/php projects/forum">Home</a>
       </li>
 
       <li class="nav-item">
@@ -28,7 +28,7 @@ echo '<nav class="navbar navbar-expand-lg navbar-light bg-light">
         $result=mysqli_query($conn,$sql);
         while($row=mysqli_fetch_assoc($result)){
           echo
-         '<a class="dropdown-item" href="/forum/threadlist.php?catid='.$row['category_id'].'">' .$row['category_name']. '</a>';
+         '<a class="dropdown-item" href="/php projects/forum/threadlist.php?catid='.$row['category_id'].'">' .$row['category_name']. '</a>';
         }
 
         echo '</div>
@@ -43,7 +43,7 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
   <input class="form-control me-2" name="search" type="search"  placeholder="Search" aria-label="Search">
     <button class="btn btn-success" type="submit">search</button>
     <a href="partial/logout.php" class="btn btn-outline-success ml-2" >Logout</a>
-    <p class="text-dark my-0 mx-2">Welcome '.$_SESSION['useremail'].'</p> 
+    <p class="text-dark my-0 mx-">Welcome '.$_SESSION['useremail'].'</p> 
         </form>';
     
 }

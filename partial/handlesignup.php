@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $result=mysqli_query($conn,$sql);
             if($result){
                 $showAlert=true;
-               header("location: /forum/index.php?signupsuccess=true");
+               header("location: /php projects/forum/index.php?signupsuccess=true");
                exit;
             }
         }
@@ -28,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $showError="Password do not Match";
         }
     }
-    header("location: /forum/index.php?signupsuccess=false&error=$showError");
+    header("location: /php projects/forum/index.php?signupsuccess=false&error=$showError");
 }
 if($showError==true){
     echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
